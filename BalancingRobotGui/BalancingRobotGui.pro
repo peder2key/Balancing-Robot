@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-08-02T20:31:20
+# Project created by QtCreator 2015-08-04T20:55:40
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = BalancingBoot
+TARGET = BalancingRobotGui
 TEMPLATE = app
 
 
