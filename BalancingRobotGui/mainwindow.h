@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+#include "Bluetooth/bluetooththread.h"
+#include "protocol/protocoll.h"
+#include "parser/protocollparser.h"
+
 namespace Ui {
 class MainWindow;
 }
