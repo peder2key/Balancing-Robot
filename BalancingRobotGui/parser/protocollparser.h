@@ -14,6 +14,9 @@ signals:
 
 public slots:
     void inncommingData(QByteArray Array);
+
+private:
+    void processRX(unsigned char RxByte);
 };
 
 #endif // PROTOCOLLPARSER_H

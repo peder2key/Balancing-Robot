@@ -20,13 +20,15 @@ SOURCES += main.cpp\
     Bluetooth/bluetooth_setup.cpp \
     Bluetooth/bluetooththread.cpp \
     protocol/protocoll.cpp \
-    parser/protocollparser.cpp
+    parser/protocollparser.cpp \
+    crccnode.cpp
 
 HEADERS  += mainwindow.h \
     Bluetooth/bluetooth_setup.h \
     Bluetooth/bluetooththread.h \
     protocol/protocoll.h \
-    parser/protocollparser.h
+    parser/protocollparser.h \
+    crccnode.h
 
 FORMS    += mainwindow.ui \
     Bluetooth/bluetooth_setup.ui
