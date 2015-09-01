@@ -94,6 +94,6 @@ void ProtocollParser::processRX(unsigned char RxByte)
 
 void ProtocollParser::processDataPayload(ST_MSG DataPayload)
 {
-
+    qDebug() << DataPayload.Data[0];
 }
 

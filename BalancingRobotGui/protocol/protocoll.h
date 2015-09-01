@@ -2,6 +2,9 @@
 #define PROTOCOLL_H
 
 #include <QObject>
+#include <QDebug>
+
+#include "crccnode.h"
 
 class protocoll : public QObject
 {
@@ -14,9 +17,11 @@ signals:
 public slots:
 
 signals:
-    void writeBytes(QByteArray Array);
+    void writeBytesToSocket(QByteArray Array);
 
 public slots:
+    void wdProtocolWriteData(QByteArray Array);
+    void wdProtocolReadData(QByteArray Array);
 
 };
 

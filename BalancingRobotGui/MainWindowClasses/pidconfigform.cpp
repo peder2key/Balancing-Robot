@@ -15,7 +15,9 @@ PidConfigForm::~PidConfigForm()
 
 void PidConfigForm::on_pushButtonRead_clicked()
 {
-
+    QByteArray Array;
+    Array.append("p");
+    emit readPid(Array);
 }
 
 void PidConfigForm::on_pushButtonWrite_clicked()

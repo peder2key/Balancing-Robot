@@ -44,10 +44,22 @@ void serialPort::readyRead()
 void serialPort::connectToPort()
 {
 
+#ifdef Q_OS_WIN
     QString portName = mSerialSetup->getPort();
-    qint32 baudRate = mSerialSetup->getBaud();
+    serial->setPort(portName);
+#endif
+
+#ifdef Q_OS_OSX
+    QString portName1 = mSerialSetup->getPort();
+    QString portName = "cu.";
+    portName.append(portName1);
     serial->setPortName(portName);
+#endif
+
+    qint32 baudRate = mSerialSetup->getBaud();
     serial->setBaudRate(baudRate);
+
+    qDebug () << portName;
 
     if(serial->isOpen())
     {

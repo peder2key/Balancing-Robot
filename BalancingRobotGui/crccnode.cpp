@@ -78,11 +78,6 @@ unsigned short DCalculateCrc(unsigned char *msg, unsigned int length_in_bytes)
 
 
 
-
-
-
-
-
 unsigned short nCalculateCrcChar(const char *Msg, unsigned long dwLength, unsigned char byReset)
 {
 

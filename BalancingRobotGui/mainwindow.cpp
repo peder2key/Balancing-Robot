@@ -19,9 +19,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupObjects()
 {
+    mProtocolParser = new ProtocollParser(this);
+
     mProtocol = new protocoll(this);
 
     mSerialSocket = new serialPort(this);
+    connect(mProtocol, SIGNAL(writeBytesToSocket(QByteArray)), mSerialSocket, SLOT(writeBytes(QByteArray)));
+    connect(mSerialSocket, SIGNAL(readyRead(QByteArray)), mProtocolParser, SLOT(inncommingData(QByteArray)));
 
     mToolBar = new bottomToolBar(this);
     this->addToolBar(Qt::BottomToolBarArea, mToolBar->getBottomToolBar());
@@ -29,6 +33,8 @@ void MainWindow::setupObjects()
 
     mPidConfiUi = new PidConfigForm(this);
     ui->scrollAreaPIDConf->setWidget(mPidConfiUi);
+    connect(mPidConfiUi, SIGNAL(writePid(QByteArray)), mProtocol, SLOT(wdProtocolWriteData(QByteArray)));
+    connect(mPidConfiUi, SIGNAL(readPid(QByteArray)), mProtocol, SLOT(wdProtocolReadData(QByteArray)));
 
     //mplotter = new plotter(this);
 }

@@ -33,6 +33,7 @@ private:
     Ui::MainWindow *ui;
 
     //Class pointers
+    ProtocollParser *mProtocolParser;
     serialPort *mSerialSocket;
     plotter *mplotter;
     PidConfigForm *mPidConfiUi;
