@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Toolbar/ToolBar/blackLeftArrow.png</file>
+        <file>Toolbar/ToolBar/blackRightArrow.png</file>
+    </qresource>
+</RCC>

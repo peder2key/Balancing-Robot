@@ -12,6 +12,12 @@ public:
 signals:
 
 public slots:
+
+signals:
+    void writeBytes(QByteArray Array);
+
+public slots:
+
 };
 
 #endif // PROTOCOLL_H

@@ -1,0 +1,20 @@
+#include "protocoll.h"
+
+protocoll::protocoll(QObject *parent) : QObject(parent)
+{
+    
+}
+
+void protocoll::wdProtocolWriteData(QByteArray Array)
+{
+    
+    QByteArray socketData;
+    
+    socketData.append("WD");
+    socketData.append("W");
+    socketData.append(Array.length());
+    socketData.append(Array);
+    
+    
+}
+
